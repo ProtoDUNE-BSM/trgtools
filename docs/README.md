@@ -29,6 +29,8 @@ Once you have set up the `np04` development area, one must clone the `trgtools` 
 git clone https://github.com/ProtoDUNE-BSM/trgtools.git
 ```
 
+Bear in mind using `pip install -r requirements.txt` in `trgtools` directory to install all Python packages necessary to run the `event_display_trigger_records.py` script. 
+
 Once completed the cloning process, one can proceed to build the `trgtools` repository. Just execute the command `dbt-build`. If the build process is successful, it is time to create a work directoy within the `build` directory. This directory will be used to run the following tools.
 
 ## find_run.sh
