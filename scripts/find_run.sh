@@ -42,7 +42,7 @@ temp_file=$(mktemp)
 find /eos/experiment/neutplatform/protodune/dune/hd-protodune/ -type f -name "np04hd_raw_run${run_number}_*" > "$temp_file"
 
 # Sort files considering both the run number and the dataflow number, then write to the output file
-awk -F'[_/.]' '{print $(NF-1), $0}' "$input_file" | sort -k1,1n | cut -d' ' -f2- > "$output_file"
+awk -F'[_/.]' '{print $(NF-1), $0}' "$temp_file" | sort -k1,1n | cut -d' ' -f2- > "$output_file"
 
 # Clean up
 rm "$temp_file"
